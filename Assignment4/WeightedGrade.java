@@ -51,7 +51,6 @@ public class WeightedGrade {
 
     public void calculateWeightedGrade() { // method for calculating weighted grade for individual inputs
         for (int i = 0; i < pointsTotal.size(); i++) {
-           // weightedGradeIndividual[i] = earnedPoints[i] / pointsTotal[i] * (assignmentPercentage[i] / 100) * 100;
             weightedGradeIndividual.add((earnedPoints.get(i)/pointsTotal.get(i)*assignmentPercentage.get(i)));
         }
     }
@@ -59,7 +58,6 @@ public class WeightedGrade {
     public double calculateTotalWeightedGrade(){ // method for calculating Total Weighted Grade
         TotalWeightedGrade=0.0;
         for(int i=0;i<pointsTotal.size();i++){
-           // TotalWeightedGrade=TotalWeightedGrade+ weightedGradeIndividual[i];
             TotalWeightedGrade=TotalWeightedGrade+ weightedGradeIndividual.get(i);
         }
         return TotalWeightedGrade;
