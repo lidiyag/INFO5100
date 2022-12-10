@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to User Home</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+  <h2>Welcome to Student Home</h2>
+  <p>Your user name is: <b>[[${#request.userPrincipal.principal.username}]]</b></p>
+  <p>The required attendance percentage is 70</p>
+  <p>Your current attendance percentage: <span th:text="${student.attendance}"></span></p>
+  <p>Your Pending Attendance is : <span th:text="${attendance}"></span></p>
+
+  <form th:action="@{/student/logout}" method="post">
+    <input type="submit" value="Logout" />
+  </form>
+</div>
+
+</body>
+</html>
